@@ -22,7 +22,7 @@ class GPU(HardwareDevice):
         self.model = model
 
     def __str__(self) -> str:
-        return f"<{HardwareDevice.MANUFACTURER} GPU {self.model} | ID: {self.device_id} | VRAM: {self.vram_gb}GB | Status: {self.status}>"
+        return f"<{HardwareDevice.MANUFACTURER} GPU {self.model} | ID: {self.device_id} | VRAM: {self.vram}GB | Status: {self.status}>"
 
     def run_diagnostics(self) -> bool:
         print(f"Running diagnostics on GPU {self.model} (ID: {self.device_id})...")
