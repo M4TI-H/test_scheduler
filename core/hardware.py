@@ -4,11 +4,9 @@ from abc import ABC, abstractmethod
 class HardwareDevice(ABC):
     MANUFACTURER = "Intel"
 
-
     def __init__(self, device_id: str):
         self.device_id = device_id
         self.status = "IDLE"
-    
 
     @abstractmethod     # requires every inheriting method to implement the run_diagnostics method
     def run_diagnostics(self) -> bool:
